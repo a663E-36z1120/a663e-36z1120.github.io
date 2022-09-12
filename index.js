@@ -14,10 +14,20 @@ document.addEventListener("DOMContentLoaded", () => {
   //3. Survival Rule: A cell survives only if has 2 or 3 neighbors alive.
     const canvas = document.querySelector("#board");
     const ctx = canvas.getContext("2d");
+
+    var gridDimension;
+    var resolution;
+    if (isMobile) {
+      gridDimension = 2000;
+      resolution = 20;
+    } else {
+      gridDimension = 1008;
+      resolution = 12;
+    }
   
-    const GRID_WIDTH = 1008;
-    const GRID_HEIGHT = 1008;
-    const RES = 12;
+    const GRID_WIDTH = gridDimension;
+    const GRID_HEIGHT = gridDimension;
+    const RES = resolution;
     const COL = GRID_WIDTH / RES;
     const ROW = GRID_HEIGHT / RES;
   
@@ -111,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#col1").style.display = "none";
       document.querySelector("#gol").style.backgroundColor = "black";
       document.querySelector("#col0").style.width = "100%";
-      document.querySelector("#page1").style.width = "50%";
-      document.querySelector("#page1").style.left = "25%";
+      document.querySelector("#page1").style.width = "75%";
+      document.querySelector("#page1").style.left = "12.5%";
       document.querySelector("#page1").style.border = "0.1em solid white"
     } else {
       function getCellPositionBoard(x, y) {
