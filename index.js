@@ -121,8 +121,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#col1").style.display = "none";
       document.querySelector("#gol").style.backgroundColor = "black";
       document.querySelector("#col0").style.width = "100%";
-      document.querySelector("#page1").style.width = "75%";
-      document.querySelector("#page1").style.left = "12.5%";
+      document.querySelector("#page1").style.width = "100%";
+      document.querySelector("#page1").style.left = "0%";
       document.querySelector("#page1").style.border = "0.1em solid white"
     } else {
       function getCellPositionBoard(x, y) {
