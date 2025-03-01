@@ -41,7 +41,7 @@
       position:sticky;
       top:0;
       background-color:black;
-      font-family:monospace;
+      font-family:'Courier New', monospace;
       white-space:pre;
       letter-spacing:0;
       text-align: left;
