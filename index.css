@@ -36,13 +36,21 @@
     position: relative;
   }
 
+  @font-face {
+    font-family: "Courier Web";
+    src: url("courier-prime.woff2") format("woff2"),
+         url("courier-prime.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
   #Name {
       font-size:0.85vh;
       display: flex;
       position:sticky;
       top:0;
       background-color:black;
-      font-family:'Courier New', monospace !important; 
+      font-family:"Courier Web", 'Courier New', monospace !important; 
       white-space:pre;
       letter-spacing:0;
       text-align: left;
