@@ -4,6 +4,7 @@
     outline: 0;
     box-sizing: border-box;
     overflow:hidden;
+    font-family: monospace;
     /* background-color:black */
   }
   
@@ -41,7 +42,7 @@
       position:sticky;
       top:0;
       background-color:black;
-      font-family:'Courier New', monospace;
+      font-family:'Courier New', monospace !important; 
       white-space:pre;
       letter-spacing:0;
       text-align: left;
