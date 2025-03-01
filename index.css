@@ -35,6 +35,21 @@
     position: relative;
   }
 
+  #Name {
+      font-size:0.85vh;
+      display: flex;
+      position:sticky;
+      top:0;
+      background-color:black;
+      font-family:monospace;
+      white-space:pre;
+      letter-spacing:0;
+      text-align: left;
+      width: 100%;
+      height: auto;
+      overflow-x: scroll;
+  }
+
   #page1 {
     display: flex;
     top: 12.25%;
