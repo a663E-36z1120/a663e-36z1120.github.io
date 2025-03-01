@@ -200,8 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
   // Dynamic resize and reload for desktop
   window.addEventListener('resize', checkAndToggleMobile);
-  window.addEventListener("orientationchange", checkAndToggleMobile);
-
   });
 
 
