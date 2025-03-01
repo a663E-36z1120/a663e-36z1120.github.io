@@ -20,11 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   
-  //Conway's game of life...
-  //GAME RULES:
-  //1. Birth Rule: If has 3 neighbors cells alive, create a new cell;
-  //2. Death Rule: A cell dies if has >=1 or <=4 neighbors;
-  //3. Survival Rule: A cell survives only if has 2 or 3 neighbors alive.
+  // Conway's game of life...
+  // GAME RULES:
+  // 1. Birth Rule: If has 3 neighbors cells alive, create a new cell;
+  // 2. Death Rule: A cell dies if has >=1 or <=4 neighbors;
+  // 3. Survival Rule: A cell survives only if has 2 or 3 neighbors alive.
     const canvas = document.querySelector("#board");
     const ctx = canvas.getContext("2d");
 
