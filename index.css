@@ -7,6 +7,25 @@
     font-family: monospace;
     /* background-color:black */
   }
+
+  .annotation {
+    text-align: right
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+  }
+  .left-half {
+    /* display: grid; */
+    align-items: center; /* Aligns vertically */
+    justify-content: left; /* Aligns horizontally */
+  }
+  .right-half {
+    /* display: grid; */
+    align-items: center; /* Aligns vertically */
+    justify-content: right; /* Aligns horizontally */
+  }
   
   .hovertxt {
     background-color: transparent;
@@ -53,12 +72,10 @@
 
   #NameAlt {
     letter-spacing: 0;
-    padding: 2vh;
-    padding-top: 5vh;
-    padding-bottom: 0vh;
     font-size:5vh;
     display: none;
     position:sticky;
+    width: 100%;
     /* top:0; */
     background-color:black;
     font-family:"Courier Prime", 'Courier New', monospace !important; 
@@ -66,13 +83,42 @@
     letter-spacing:0;
     text-align: left;
     height: auto;
+  }
+  /* Style for both halves */
+  #NameAltName {
+    display: flex;
+    padding: 2vh;
+    padding-top: 5vh;
+    padding-bottom: 0vh;
+    padding-right: 0vh;
+    text-align: left;
     overflow-x: scroll;
     line-height: 1;
     white-space: pre-wrap;
     word-wrap: break-word;
     hyphens: auto;
+    width: 100%;
+    /* font-size: 24px; */
+    /* font-weight: bold; */
+    /* color: white; */
+  }
 
-}
+  #NameAltHead {
+    display:flex;
+    font-size:3.5vh;
+    text-align: right;
+    padding: 0vh;
+    padding-top: 5vh;
+    padding-left: 0vh;
+    justify-content: center;
+    line-height: 1;
+    width: 100%;
+    overflow-x: scroll;
+    /* display: none; */
+    /* font-size: 24px; */
+    /* font-weight: bold; */
+    /* color: white; */
+  }
 
   #page1 {
     display: flex;
@@ -97,9 +143,7 @@
     font-size:small
   }
 
-  .annotation {
-    text-align: right
-  }
+
 
   td {font-family: 'Courier New', monospace;}
 
