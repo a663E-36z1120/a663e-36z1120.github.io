@@ -14,7 +14,7 @@
 
   .container {
     display: grid;
-    grid-template-columns: 5fr 4fr;
+    grid-template-columns: 6fr 5fr;
   }
   .left-half {
     /* display: grid; */
@@ -105,11 +105,12 @@
 
   #NameAltHead {
     display:flex;
-    font-size:3.5vh;
+    font-size:4vh;
     text-align: right;
     padding: 0vh;
-    padding-top: 6vh;
-    padding-left: 0vh;
+    padding-top: 5vh;
+    padding-left: 0.5vh;
+    padding-bottom: 0.5vh;
     justify-content: center;
     line-height: 1;
     width: 100%;
