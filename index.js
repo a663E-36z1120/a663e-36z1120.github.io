@@ -137,9 +137,13 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#page1").style.width = "100%";
       document.querySelector("#page1").style.left = "0%";
       document.querySelector("#page1").style.top = "10%";
+      document.querySelector("#Name").style.display = "none"
+      document.querySelector("#NameAlt").style.display = "flex"
       // document.querySelector("#page1").style.border = "0.1em solid white";
       document.querySelector(".hovertxt").style.display = "none"
     } else {
+      document.querySelector("#Name").style.display = "flex"
+      document.querySelector("#NameAlt").style.display = "none"
       function getCellPositionBoard(x, y) {
         let offsetLeft = canvas.offsetLeft;
         let offsetTop = canvas.offsetTop;
