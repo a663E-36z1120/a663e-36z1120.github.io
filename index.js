@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
       col1.addEventListener("mouseenter", switchRickyAndI);
       col1.addEventListener("mouseleave", switchRickyAndI);
       col1.addEventListener("mousewheel", switchRickyAndI);
-  
+
       function switchRickyAndI(e) {
         if (document.querySelector("#me").style.display !== "none") {
           document.querySelector("#me").style.display = "none";
