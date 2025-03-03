@@ -176,8 +176,6 @@
     overflow-y: scroll;
   }
 
-  #clustrmaps-widget-v2 {display: none !important;}
-
   ::-webkit-scrollbar {
       width: 10px;
   }
