@@ -162,6 +162,10 @@
     /* color: white; */
   }
 
+  #cv-row {
+    white-space: nowrap;
+  }
+
   #page1 {
     display: flex;
     top: 12.25%;
