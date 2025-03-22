@@ -5,6 +5,7 @@
     box-sizing: border-box;
     overflow:hidden;
     font-family: monospace;
+    text-align: justify;
     /* background-color:black */
   }
 
@@ -15,7 +16,9 @@
   }
 
   i {
-    vertical-align: bottom;
+    vertical-align: middle;
+    display: inline;
+    height: 100%;
   }
 
   amp {
@@ -33,7 +36,7 @@
   }
 
   .annotation {
-    text-align: right
+    text-align: left
   }
 
   .container {
