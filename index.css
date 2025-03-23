@@ -112,6 +112,7 @@
       width: 100%;
       height: auto;
       overflow-x: scroll;
+      margin-bottom: 0;
   }
 
   #NameAlt {
