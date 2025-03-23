@@ -5,7 +5,7 @@
     box-sizing: border-box;
     overflow:hidden;
     font-family: monospace;
-    font: 'Consolas', 'Roboto';
+    font: 'Consolas', 'Roboto', 'Courier New';
     text-align: justify;
     /* background-color:black */
   }
