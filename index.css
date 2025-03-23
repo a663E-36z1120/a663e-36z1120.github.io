@@ -4,16 +4,16 @@
     outline: 0;
     box-sizing: border-box;
     overflow:hidden;
-    font-family: 'Courier New', monospace;
+    font-family: 'Consolas', 'Courier New', "Courier Prime", 'BitstreamVeraSansMono', monospace ;
     text-align: justify;
     /* background-color:black */
   }
 
-  td {
-    font-family: 'Courier New', monospace;
+  /* td { */
+    /* font-family: 'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', ; */
     /* vertical-align: middle; */
     /* align-items: center; */
-  }
+  /* } */
 
   i {
     vertical-align: middle;
@@ -27,7 +27,7 @@
   }
 
   .txt {
-    font-family: 'Courier New', monospace;
+    /* font-family: 'Courier New', monospace; */
     background-color: black;
     color: white;
     padding: 2vh;
@@ -106,7 +106,7 @@
       position:sticky;
       top:0;
       background-color:black;
-      font-family:'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', monospace !important; 
+      /* font-family:'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', monospace !important;  */
       white-space:pre;
       letter-spacing:0;
       text-align: left;
@@ -124,7 +124,7 @@
     width: 100%;
     /* top:0; */
     background-color:black;
-    font-family:"Courier Prime", 'Courier New', monospace !important; 
+    /* font-family:'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New',  !important;  */
     white-space:pre;
     letter-spacing:0;
     text-align: left;
