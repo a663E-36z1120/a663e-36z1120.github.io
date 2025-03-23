@@ -4,7 +4,7 @@
     outline: 0;
     box-sizing: border-box;
     overflow:hidden;
-    font-family: 'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', Courier, monospace;
+    font-family: 'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', monospace;
     text-align: justify;
     /* background-color:black */
   }
@@ -106,7 +106,7 @@
       position:sticky;
       top:0;
       background-color:black;
-      font-family:'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', Courier, monospace !important; 
+      font-family:'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', monospace !important; 
       white-space:pre;
       letter-spacing:0;
       text-align: left;
@@ -124,7 +124,7 @@
     width: 100%;
     /* top:0; */
     background-color:black;
-    font-family:'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', Courier, monospace !important; 
+    font-family:'Consolas', 'BitstreamVeraSansMono', "Courier Prime", 'Courier New', monospace !important; 
     white-space:pre;
     letter-spacing:0;
     text-align: left;
