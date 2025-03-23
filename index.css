@@ -4,7 +4,7 @@
     outline: 0;
     box-sizing: border-box;
     overflow:hidden;
-    font-family: 'Consolas', 'Courier New', "Courier Prime", 'BitstreamVeraSansMono', monospace ;
+    font-family: 'Consolas',  monospace;
     text-align: justify;
     /* background-color:black */
   }
