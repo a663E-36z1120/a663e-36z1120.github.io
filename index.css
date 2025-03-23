@@ -4,7 +4,8 @@
     outline: 0;
     box-sizing: border-box;
     overflow:hidden;
-    font-family: 'Consolas', 'Roboto', 'Verdana', monospace;
+    font-family: monospace;
+    font: 'Consolas', 'Roboto';
     text-align: justify;
     /* background-color:black */
   }
