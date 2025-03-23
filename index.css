@@ -4,7 +4,7 @@
     outline: 0;
     box-sizing: border-box;
     overflow:hidden;
-    font-family: 'Consolas',  monospace;
+    font-family: 'Consolas', 'Verdana', monospace;
     text-align: justify;
     /* background-color:black */
   }
