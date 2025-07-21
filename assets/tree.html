@@ -133,6 +133,13 @@
     window.addEventListener('resize', resize);
     window.addEventListener('scroll', draw);
     resize();
+
+    document.getElementById('tree').addEventListener('click', () => {
+    window.scrollBy({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
+  });
   </script>
 </body>
 </html>
