@@ -293,7 +293,7 @@
   
   .side-box{
     flex: auto;
-    width: 75%;
+    width: 80%;
     aspect-ratio:1;
     background:#fff;
     margin-left:1rem;
