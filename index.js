@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (isMobile) {
         populateRow = () =>
           new Array(rows).fill(null).map(() => 
-            Math.round(Math.random()
+            Math.round(Math.random() / 1.7
           )
         )
       } else {
@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
           //   console.log("mouse location:", coord[0], coord[1]);
             grid[coord[0]][coord[1]] = 1;
             drawGrid(grid, COL, ROW, RES);
-          } catch {}
+        } catch {}
       }
   
       const col1 = document.querySelector("#col1");
