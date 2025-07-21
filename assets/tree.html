@@ -44,6 +44,10 @@
       canvas.width  = window.innerWidth;
       canvas.height = window.innerHeight;
       draw();
+      window.scrollBy({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
     }
 
     function draw() {
@@ -135,11 +139,12 @@
     resize();
 
     document.getElementById('tree').addEventListener('click', () => {
-    window.scrollBy({
-      top: document.body.scrollHeight,
-      behavior: 'smooth'
+      window.scrollBy({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+      });
     });
-  });
+  
   </script>
 </body>
 </html>
