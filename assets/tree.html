@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>tree</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      /* page height just needs to allow scrolling */
+      height: 1000vh;
+      background: #fff;   /* white background */
+    }
+    canvas {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: #fff;   /* ensure canvas background white */
+    }
+    ::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+  </style>
+</head>
+<body>
+  <canvas id="tree"></canvas>
+  <script>
+    const MAX_ITER = 6;
+    const REVEAL_STEPS = 4;       // break reveal into N steps
+    const STAGES_PER_ITER = REVEAL_STEPS + 1;
+    const WIDTH_RATIO = 0.0115;    // line width relative to canvas width
+    const canvas = document.getElementById('tree');
+    const ctx    = canvas.getContext('2d');
+
+    // persistent maps for chirality and reveal order
+    const chiralityMap = [];
+    const revealOrder  = [];
+    let nodeCounters   = [];
+
+    function resize() {
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
+      draw();
+    }
+
+    function draw() {
+      const scrollY = window.scrollY;
+      const maxY    = document.body.scrollHeight - window.innerHeight;
+      const totalStages = MAX_ITER * STAGES_PER_ITER;
+      const frac = maxY > 0 ? scrollY / maxY : 0;
+      const stage = Math.min(
+        totalStages - 1,
+        Math.floor(frac * totalStages)
+      );
+      const iterIndex = Math.floor(stage / STAGES_PER_ITER);
+      const revealStep = stage % STAGES_PER_ITER;
+      const depth = Math.max(1, iterIndex + 1);
+
+      // reset counters for each draw
+      nodeCounters = new Array(depth + 1).fill(0);
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.save();
+      ctx.translate(canvas.width / 2, canvas.height);
+    //   ctx.lineCap  = 'butt';
+    //   ctx.lineJoin = 'butt';
+      drawBranch(canvas.height * 0.25, 0, 0, depth, revealStep);
+      ctx.restore();
+    }
+
+    function drawBranch(len, angle, level, maxLevel, revealStep) {
+      // draw segment with solid black
+      ctx.strokeStyle = '#000';
+      // compute line width as proportion of canvas width, scaled by depth factor
+      const scaleFactor = (maxLevel - level + 1) / (maxLevel + 1);
+      ctx.lineWidth = canvas.width * WIDTH_RATIO * scaleFactor;
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(0, -len);
+      ctx.stroke();
+
+      ctx.translate(0, -len);
+      if (level < maxLevel) {
+        // index of this node at current level
+        const idx = nodeCounters[level]++;
+        // persistent chirality per node
+        if (!chiralityMap[level]) chiralityMap[level] = [];
+        if (chiralityMap[level][idx] === undefined) {
+          chiralityMap[level][idx] = Math.random() < 0.5 ? 1 : -1;
+        }
+        const c = chiralityMap[level][idx];
+
+        const spread = Math.PI / 8;
+        const nextLen = len * 0.7;
+        const branches = [
+          { translate: null,    rotate: -1.45 * spread, len: nextLen * 0.9 },
+          { translate: [0, nextLen * 0.4], rotate: -2.065 * spread, len: nextLen * 0.65 },
+          { translate: null,    rotate:  0.75 * spread, len: nextLen * 1.05 },
+          { translate: [0, nextLen * 0.8], rotate:  1.375 * spread, len: nextLen * 0.75 }
+        ];
+
+        // prepare reveal order for newest generation
+        if (level === maxLevel - 1) {
+          if (!revealOrder[level]) revealOrder[level] = [];
+          if (!revealOrder[level][idx]) revealOrder[level][idx] = [];
+        }
+
+        for (let i = 0; i < branches.length; i++) {
+          const b = branches[i];
+
+          // granular reveal only at the newest generation
+          if (level === maxLevel - 1) {
+            if (revealOrder[level][idx][i] === undefined) {
+              revealOrder[level][idx][i] = Math.floor(Math.random() * REVEAL_STEPS);
+            }
+            if (revealOrder[level][idx][i] > revealStep) continue;
+          }
+
+          ctx.save();
+          ctx.scale(c, 1);
+          if (b.translate) ctx.translate(b.translate[0], b.translate[1]);
+          ctx.rotate(b.rotate);
+          drawBranch(b.len, angle + b.rotate, level + 1, maxLevel, revealStep);
+          ctx.restore();
+        }
+      }
+      ctx.translate(0, len);
+    }
+
+    window.addEventListener('resize', resize);
+    window.addEventListener('scroll', draw);
+    resize();
+  </script>
+</body>
+</html>

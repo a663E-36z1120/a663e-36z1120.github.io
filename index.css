@@ -273,6 +273,46 @@
     box-shadow: none;
   } */
 
+  .wrapper{
+    display:flex;
+    flex-wrap:nowrap;
+    align-items: stretch;
+  }
+
+  .left-pane{
+    overflow-x:scroll;
+  }
+  
+  .table-wrap{
+    overflow-x:auto;
+  }
+  .table-wrap table{
+    border-collapse:collapse;
+    width:max-content;
+  }
+  
+  .side-box{
+    flex:0 0 auto;
+    height:13.25em;
+    aspect-ratio:1;
+    background:#fff;
+    margin-left:1rem;
+    vertical-align: bottom;
+  }
+  .tree {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: block;
+    background: #fff;   /* ensure canvas background white */
+  }
+  iframe {
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border: none;
+  }
+
 
 
 
