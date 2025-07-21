@@ -76,7 +76,7 @@
       ctx.strokeStyle = '#000';
       // compute line width as proportion of canvas width, scaled by depth factor
       const scaleFactor = (maxLevel - level + 1) / (maxLevel + 1);
-      ctx.lineWidth = canvas.width * WIDTH_RATIO * scaleFactor;
+      ctx.lineWidth = canvas.height * WIDTH_RATIO * scaleFactor;
       ctx.beginPath();
       ctx.moveTo(0, 0);
       ctx.lineTo(0, -len);
