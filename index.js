@@ -147,6 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("#NameAlt").style.display = "grid"
       // document.querySelector("#page1").style.border = "0.1em solid white";
       document.querySelector(".hovertxt").style.display = "none"
+      document.querySelector(".sidebox").style.display = "none"
     } else {
       document.querySelector("#Name").style.display = "flex"
       document.querySelector("#NameAlt").style.display = "none"
