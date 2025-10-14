@@ -44,10 +44,10 @@
       canvas.width  = window.innerWidth;
       canvas.height = window.innerHeight;
       draw();
-      window.scrollBy({
-        top: rect.bottom - window.innerHeight,
-        behavior: 'smooth'
-      });
+      window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
     }
 
     function draw() {
