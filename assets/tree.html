@@ -45,7 +45,7 @@
       canvas.height = window.innerHeight;
       draw();
       window.scrollBy({
-        top: document.body.scrollHeight,
+        top: rect.bottom - window.innerHeight,
         behavior: 'smooth'
       });
     }
