@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     drawGrid(grid, COL, ROW, RES);
 
     if (isMobile) {
-      updateInterval = 100; // milliseconds
+      updateInterval = 450; // milliseconds
       document.querySelector("#col1").style.display = "none";
       document.querySelector("#gol").style.backgroundColor = "black";
       document.querySelector("#col0").style.width = "100%";
