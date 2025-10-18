@@ -182,9 +182,9 @@ document.addEventListener("DOMContentLoaded", () => {
       function switchRickyAndI(e) {
         if (document.querySelector("#me").style.display !== "none") {
           document.querySelector("#me").style.display = "none";
-          document.querySelector("#meWithRicky").style.display = "block";
+          document.querySelector("#meWithRicky").style.display = "grid";
         } else {
-          document.querySelector("#me").style.display = "block";
+          document.querySelector("#me").style.display = "grid";
           document.querySelector("#meWithRicky").style.display = "none";
         }
       }
