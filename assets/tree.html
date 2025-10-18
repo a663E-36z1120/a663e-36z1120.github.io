@@ -34,6 +34,8 @@
     const WIDTH_RATIO = 0.0115;    // line width relative to canvas width
     const canvas = document.getElementById('tree');
     const ctx    = canvas.getContext('2d');
+    const root = document.scrollingElement || document.documentElement;
+    const target = root.scrollHeight - root.clientHeight;
 
     // persistent maps for chirality and reveal order
     const chiralityMap = [];
@@ -41,13 +43,13 @@
     let nodeCounters   = [];
 
     function resize() {
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
-      draw();
-      window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth'
-    });
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+        draw();
+        window.scrollTo({
+        top: target, 
+        behavior: 'smooth'
+      });
     }
 
     function draw() {
@@ -139,7 +141,7 @@
     resize();
 
     document.getElementById('tree').addEventListener('click', () => {
-      window.scrollBy({
+      window.scrollTo({
         top: document.body.scrollHeight,
         behavior: 'smooth'
       });
