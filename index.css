@@ -78,9 +78,17 @@
   
   .column {
     float: left;
-    width: 50%;
+    /* width: 50%; */
     height: 100vh;
     position: relative;
+  }
+
+  #col0 {
+    width: 55%;
+  }
+
+   #col1 {
+    width: 45%;
   }
 
   .table-scroll {
@@ -181,9 +189,9 @@
 
   #page1 {
     display: flex;
-    top: 12.25%;
-    width: 35.75%;
-    left: 7.1%;
+    top: 12.7%;
+    width: 43%;
+    left: 5.95%;
     height: 74vh;
     position: absolute;
     display: inline;
@@ -295,7 +303,7 @@
   .side-box{
     flex: auto;
     /* height: 20%; */
-    width: 80%;
+    width: 45%;
     max-width: 13em;
     height: 13em;
     aspect-ratio:0.75;
@@ -317,6 +325,7 @@
     width: 100%;
     border: none;
   }
+
 
 
 
